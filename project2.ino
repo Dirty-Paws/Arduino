@@ -8,6 +8,7 @@
 
   
   int lm35Pin = A2;
+  int seviye=A1;
   int okunan_deger = 0;
   float sicaklik_gerilim = 0;
   float sicaklik = 0;
@@ -18,8 +19,8 @@
  
   
   Servo servo;
-  int sound = 250;
-  int seviye=A1;
+ 
+  
 
 
 
@@ -41,11 +42,7 @@
 
     void loop() {
         long duration, distance;
-
-        
- 
-          
-  
+            
               
               digitalWrite(trigPin, LOW);
               delayMicroseconds(2);
@@ -96,10 +93,6 @@
                     seviye=analogRead(A1);
                     Serial.print("\n Suyun Seviyesi:");
                     Serial.println(seviye);
-
-            
-            
-                    
-                   
+                                                           
                         
               }
