@@ -25,3 +25,6 @@ Bu repository'de akıllı mama kabına Arduino Uno CH340 üzerindeki sensörleri
 
 
 
+## Dataların Toplanması 
+
+Dataların toplanması için [teraterm](https://osdn.net/projects/ttssh2/releases/) yazılımı kullanılmıştır. 
