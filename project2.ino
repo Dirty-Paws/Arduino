@@ -52,14 +52,14 @@
               duration = pulseIn(echoPin, HIGH);
               distance = (duration/2) / 29.1;
               
-              okunan_deger = analogRead(lm35Pin);
+              okunan_deger = analogRead(lm35Pin);         //Sıcaklık sensörünün çalıştırılması
               sicaklik_gerilim = (okunan_deger / 1023.0)*5000;
               sicaklik = sicaklik_gerilim /10.0; 
             
               Serial.print(sicaklik);
               Serial.println(" celsius");
               
-              if (distance < 32) {
+              if (distance < 32) {        // Ultrasonik sensöre 32cmden yakın olduğunda servo motor sayesinde mama kabı açılıyor.
                   Serial.println("32cm'den daha yakın");
                   servo.write(120);
               }
@@ -81,7 +81,7 @@
                     Serial.println(isik);
                     delay(750);
               
-                if(isik > 80){
+                if(isik > 80){        // Mama bittiğinde ışık yoğunluğu daha fazla olacağından ışığın fazlalığı = Mama bitmiştir.
                   digitalWrite(led,HIGH);
                   Serial.print("Mama bitti.");
                 }
